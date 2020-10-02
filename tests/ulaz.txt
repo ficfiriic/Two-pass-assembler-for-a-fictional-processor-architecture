@@ -1,0 +1,19 @@
+.global a,b,c
+.extern d
+.data
+.skip 9
+tanja:
+.align 5
+.text
+addb r0,r1
+addb r1, 0x25
+addw r0, 0x0036
+nikola:
+movw sp[0], 0x1234
+mov r6[8], *1234
+mov r6[8], r2
+mov r3[368], r6[8]
+mov r5[nikola], &tanja
+add r4, nikola
+mul r5, $a
+.end

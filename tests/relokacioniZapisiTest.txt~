@@ -1,0 +1,17 @@
+.global a,b
+.data
+a: .skip 8
+.align 13
+d:
+.word 1234
+.text
+movb r0, r1
+b: movb r2,r3
+add r4, $b
+mul $a, r5
+c: jmb b
+jne $c
+add r6, $d
+cmp c,d
+cmp b,a
+.end
